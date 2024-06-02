@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/user/Desktop/PetStoreTests/src/main/java/org/example">
+        <classes>
+            <class name="org.example.Pet">
+                <methods>
+                    <include name="AddAnewPet"/>
+                    <include name="AddAnewPetWithoutBody"/>
+                    <include name="AddAnewPetWithInvalidBody"/>
+                    <include name="FindPetsByID"/>
+                    <include name="FindPetsByInexistentPet"/>
+                    <include name="FindPetsBySpecialCharacter"/>
+                    <include name="UpdateThePetInformationWithNoValidJson"/>
+                    <include name="DeletePetById"/>
+                    <include name="DeleteOrderWithInvalidID"/>
+                </methods>
+            </class>
+            <class name="org.example.Store"><methods>
+                <include name="GetPetInventariesByStatus"/>
+                <include name="PlaceAnOrder"/>
+                <include name="ValidateResponse"/>
+                <include name="PlaceAnOrderWithoutBody"/>
+                <include name="FindOrderById"/>
+                <include name="FindOrderNonCreated"/>
+                <include name="FindOrderWithInvalidID"/>
+                <include name="DeleteOrderById"/>
+                <include name="DeleteOrderWithInvalidID"/>
+            </methods>
+            </class>
+            <class name="org.example.User">
+                <methods>
+                    <include name="CreateUser"/>
+                    <include name="ValidResultOfCreateUser"/>
+                    <include name="CreateUserWithoutBody"/>
+                    <include name="CreateUserWithoutHeaders"/>
+                    <include name="LoginWithValidCredentials"/>
+                    <include name="GetInformationWithValidUser"/>
+                    <include name="GetInformationWithInvalidUser"/>
+                    <include name="UpdateSpecificUserInformation"/>
+                    <include name="UpdateTheUserInformation"/>
+                    <include name="LogOutTheUser"/>
+                    <include name="DeleteTheUser"/>
+                    <include name="GetInformationWithAUnregisteredUser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

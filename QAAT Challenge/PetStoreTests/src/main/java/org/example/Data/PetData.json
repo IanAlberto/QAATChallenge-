@@ -1,0 +1,18 @@
+{
+  "id": 11,
+  "name": "doggie",
+  "category": {
+    "id": 1,
+    "name": "Dogs"
+  },
+  "photoUrls": [
+    "https://th.bing.com/th/id/R.6f5ff4a55984b199b086d382c24543df?rik=QTzOlhysHImPEQ&riu=http%3a%2f%2fwww.infoescola.com%2fwp-content%2fuploads%2f2010%2f08%2fdoberman_223996249.jpg&ehk=%2fDkftpHXIILaR8lEJ87ikNsWcPsVqngYYb1Ivb1CoF8%3d&risl=&pid=ImgRaw&r=0"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "Dobber"
+    }
+  ],
+  "status": "available"
+}
