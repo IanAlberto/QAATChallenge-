@@ -39,7 +39,6 @@ public class User {
     //Create user
     @Test(priority = 1)
     public void CreateUser() {
-    // Prueba definida para la creacion del usuario
         given().accept(ContentType.JSON).
                 contentType(ContentType.JSON).filter(new AllureRestAssured()).
                 body(jsonBody).when().post("/user").then().statusCode(200).log().body();
@@ -47,7 +46,6 @@ public class User {
 
     @Test(priority = 2)
     public void ValidResultOfCreateUser() {
-        // Prueba definida para la creacion del usuario
         given().accept(ContentType.JSON).
                         contentType(ContentType.JSON).filter(new AllureRestAssured()).
                         body(jsonBody).when().post("/user").then().
@@ -58,7 +56,6 @@ public class User {
     //Negative test cases
     @Test(priority = 3)
     public void CreateUserWithoutBody() {
-    // Prueba definida para la creacion del usuario
         given().accept(ContentType.JSON).
                 contentType(ContentType.JSON).filter(new AllureRestAssured()).
                 when().post("/user").then().statusCode(400).log().body();
@@ -66,7 +63,6 @@ public class User {
 
     @Test(priority = 4)
     public void CreateUserWithoutHeaders() {
-        // Prueba definida para la creacion del usuario
         given().body(jsonBody).filter(new AllureRestAssured()).
                 when().post("/user").then().statusCode(415).log().body();
     }
@@ -91,7 +87,6 @@ public class User {
 
     @Test(priority = 7)
     public void GetInformationWithInvalidUser() {
-        // This API has a bug here cause the result should be 400. But the status code is 200
         String result = given().filter(new AllureRestAssured()).pathParams("username", "a").when().get("http://localhost:8080/api/v3/user/{username}").then().
                 statusCode(404).extract().asString();
         Assert.assertEquals(true, result.contains("User not found"));
@@ -147,7 +142,6 @@ public class User {
     //To validate that the user is deleted
     @Test(priority = 12)
     public void GetInformationWithAUnregisteredUser() {
-        // This API has a bug here cause the result should be 400. But the status code is 200
         String result = given().filter(new AllureRestAssured()).pathParams("username", "a").when().get("http://localhost:8080/api/v3/user/{username}").
                 then().statusCode(404).extract().asString();
         Assert.assertEquals(true, result.contains("User not found"));

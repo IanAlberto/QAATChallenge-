@@ -40,7 +40,7 @@ public class Store {
         complete = obj.getBoolean("complete");
     }
 
-    //Get the information of the pet inventaries by the status
+    //Get the information of the pet inventories by the status
     @Test(priority = 1)
     public void GetPetInventariesByStatus() {
         given().accept(ContentType.JSON).

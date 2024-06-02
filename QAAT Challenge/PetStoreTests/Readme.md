@@ -45,7 +45,30 @@ To execute the report:
 allure serve allure-results
 ```
 
-# Note
+
+## List of TCs to automate
+
+User (each flow contains positive, negative tcs):
+* create user
+* Login
+* Logout
+* Delete the user
+* update the user information
+* Get the user information
+
+Pet
+* Add a Pet
+* Find a pet
+* update the pet information
+* delete the pet
+
+Store
+* Get the pet inventories
+* Place an order
+* Find an order
+* Delete the order
+
+## Note
 
 There some negative test cases that I can't automate cause it's not returning the right response or status code.
 
